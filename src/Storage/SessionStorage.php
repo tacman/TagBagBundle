@@ -59,7 +59,7 @@ final class SessionStorage implements StorageInterface
         try {
             return $this->requestStack->getSession();
         } catch (SessionNotFoundException $e) {
-            throw new StorageException($e->getMessage(), 0, $e);
+            throw new StorageException(message: $e->getMessage(), previous: $e);
         }
     }
 }
