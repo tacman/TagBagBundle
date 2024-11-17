@@ -49,11 +49,8 @@ use Setono\TagBag\TagBagInterface;
 
 class YourService
 {
-    private $tagBag;
-    
-    public function __construct(TagBagInterface $tagBag) 
+    public function __construct(private TagBagInterface $tagBag) 
     {
-        $this->tagBag = $tagBag;
     }
     
     public function method(): void 
